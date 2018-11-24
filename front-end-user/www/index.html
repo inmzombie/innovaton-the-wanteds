@@ -14,16 +14,15 @@
 	<script type="text/javascript" src="node-materialize/bin/materialize.js"></script>
 	<script type="text/javascript" src="angular-materialize/src/angular-materialize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript">
 		var socket = io('http://localhost:3000');
-		socket.on('connection', function (socket) {
-			socket.on('update', function (value) {
-				console.log('message: ' + value);
-			});
-		});
+        socket.on('update', function(msg){
+            console.log(msg);
+            updateHeartRadio(msg);
+        });
 	</script>
 	<!-- Your app -->
-	<script type="text/javascript" src="app.js"></script>
 	<style>
 		.sombra {
 			-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);

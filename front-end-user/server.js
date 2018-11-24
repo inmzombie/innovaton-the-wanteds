@@ -13,10 +13,10 @@ io.on('connection', function (socket) {
 });
 
 app.get('/setvalue/:value', function(req, res) { 
-    console.log(req.params.value) 
-    io.emit('update', req.params.value); 
+    console.log(req.params.value);
+    io.emit('update', req.params.value);
     return res.status(200).json(req.params.value) 
-}) 
+});
 
 server.listen(3000);
 
