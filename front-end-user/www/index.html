@@ -5,21 +5,21 @@
 	<title>Minimal example</title>
 
 	<!-- Materialize CSS -->
-	<link rel="stylesheet" href="node-materialize/bin/materialize.css">
+	<link rel="stylesheet" href="/scripts/node-materialize/bin/materialize.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
-	<script type="text/javascript" src="jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="angular/angular.min.js"></script>
-	<script type="text/javascript" src="node-materialize/bin/materialize.js"></script>
-	<script type="text/javascript" src="angular-materialize/src/angular-materialize.min.js"></script>
+	<script type="text/javascript" src="/scripts/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="/scripts/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/scripts/node-materialize/bin/materialize.js"></script>
+	<script type="text/javascript" src="/scripts/angular-materialize/src/angular-materialize.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript">
 		var socket = io('http://localhost:3000');
         socket.on('update', function(msg){
             console.log(msg);
-            updateHeartRadio(msg);
+						updateHeartRadio(msg);
         });
 	</script>
 	<style>
@@ -53,7 +53,7 @@
 				<div class="col s6 inactivo" style="font-size: 30px; text-align:center;height:50px;"><span class="inactivo-texto">estres</span></div>
 			</div>
 			<div class="row" style="background:#ffffff; height:50vh">
-				<div class="col s12" style="font-size: 130px; font-family: 'Lato', sans-serif; color:#9e9e9e; text-align:center;"><span class="heart-ration">--</span> <i class="material-icons" style="color: #f44336; font-size:25px; position: relative; bottom: 40px;">favorite</i><span style="font-size:40px; position: relative; bottom: 0px; margin-left: -30px;">ppm</span></div>
+				<div class="col s12 heart-ration" style="font-size: 130px; font-family: 'Lato', sans-serif; color:#9e9e9e; text-align:center;">-- <i class="material-icons" style="color: #f44336; font-size:25px; position: relative; bottom: 40px;">favorite</i><span style="font-size:40px; position: relative; bottom: 0px; margin-left: -30px;">ppm</span></div>
 				<div class="col s1"></div>
 				<div class="col s10" style="background: #9e9e9e; height: 1px;"></div>
 				<div class="col s1"></div>
