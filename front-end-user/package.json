@@ -1,0 +1,23 @@
+{
+  "name": "front-end-user",
+  "version": "1.0.0",
+  "description": "innovation teleton hackathon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:inmzombie/innovaton-the-wanteds.git"
+  },
+  "keywords": [
+    "teleton",
+    "innovation",
+    "hackathon"
+  ],
+  "author": "the wanteds",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.5"
+  }
+}
