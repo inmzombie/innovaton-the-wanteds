@@ -1,7 +1,11 @@
-var app = angular.module('materializeApp', ['ui.materialize'])
-    .controller('BodyController', ["$scope", function ($scope) {
-        $scope.select = {
-            value: "Option1",
-            choices: ["Option1", "I'm an option", "This is materialize", "No, this is Patrick."]
-        };
-    }]);
+function updateHeartRadio(data) {
+    jQuery('.heart-ration').html(data);
+}
+
+function updateCalories(data) {
+    jQuery('.cal').html(data)
+}
+
+function updateMov(data) {
+    jQuery('.mov').html(data)
+}
