@@ -12,6 +12,12 @@ io.on('connection', function (socket) {
     console.log('a user connected');
 });
 
+app.get('/setvalue/:value', function(req, res) { 
+    console.log(req.params.value) 
+    io.emit('update', req.params.value); 
+    return res.status(200).json(req.params.value) 
+}) 
+
 server.listen(3000);
 
 /*app.listen(3000, function () {
