@@ -18,6 +18,7 @@
   "author": "the wanteds",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.5"
+    "angular": "^1.7.5",
+    "express": "^4.16.4"
   }
 }
