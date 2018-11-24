@@ -1,0 +1,46 @@
+###################################
+# DEVELOPMENT DOCKER-COMPOSE FILE #
+###################################
+
+# La configuración de una aplicación es todo lo que 
+# puede variar entre despliegues (entornos de 
+# preproducción, producción, desarrollo, etc), lo 
+# cual incluye:
+
+# Recursos que manejan la base de datos, Memcached, 
+# y otros “backing services”.
+# Credenciales para servicios externos tales como 
+# Amazon S3 o Twitter.
+# Valores de despliegue como por ejemplo el nombre 
+# canónico del equipo para el despliegue.
+
+version: '3'
+services:
+  # MONGODB DATABASE
+  mongo-database:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: moniton
+    volumes:
+      - mongodb-vol-innovaton:/data/db  
+  # NGINX ENTRY
+  nginx:
+    build:
+      context: ./docker/nginx/
+    restart: always
+    volumes:
+      - ./miband-js/public:/usr/share/nginx/moniton
+    depends_on:
+      - mongo-database
+    ports:
+     - 80:80
+     - 443:443
+     - 8080:8080
+volumes:
+  mongodb-vol-innovaton:
+
+
+
