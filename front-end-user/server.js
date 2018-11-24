@@ -4,7 +4,9 @@ app.use(express.static(__dirname + '/www'));
 app.use(express.static(__dirname + '/node_modules'));
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
-io.on('conection', function() {});
+io.on('conection', function() {
+
+});
 server.listen(3000);
 
 /*app.listen(3000, function () {
