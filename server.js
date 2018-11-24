@@ -30,7 +30,8 @@ let server = https.createServer(httpsOptions, app);
 /**
  * SOCKETS.IO INTEGRATION
  */
-io(server, {
+
+let socketServer = io(server, {
 	origins: '*:*'
 });
 
@@ -69,8 +70,14 @@ app.get('/setvalue/:value', function (req, res) {
 	return res.status(200).json(req.params.value)
 });
 
-
+/**
+ * SERVER PORT
+ */
 let serverport = 3000
+
+/**
+ * SERVER LIFT
+ */
 server.listen(serverport, function () {
 	console.log(`[SUCCESS] API RUNNING AT PORT ${serverport}
 	`);

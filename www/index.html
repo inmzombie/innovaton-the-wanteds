@@ -10,7 +10,7 @@
 	<!-- iOS Safari -->
 	<meta name="apple-mobile-web-app-status-bar-style" content="#f44336">
 	<!-- Materialize CSS -->
-	<link rel="stylesheet" href="http://localhost:3000/scripts/node-materialize/bin/materialize.css">
+	<link rel="stylesheet" href="/scripts/node-materialize/bin/materialize.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
@@ -21,7 +21,9 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript">
-		var socket = io('http://localhost:3000');
+
+		var socket = io('https://localhost:3000', {secure: true});
+
 		socket.on('update', function (msg) {
 			console.log(msg);
 			updateHeartRadio(msg);
