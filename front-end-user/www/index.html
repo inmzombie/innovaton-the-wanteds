@@ -4,6 +4,7 @@
 
     <!-- Materialize CSS -->
     <link rel="stylesheet" href="node-materialize/bin/materialize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
     <script type="text/javascript" src="jquery/dist/jquery.js"></script>
@@ -12,24 +13,17 @@
     <script type="text/javascript" src="angular-materialize/src/angular-materialize.min.js"></script>
 
     <!-- Your app -->
-    <script type="text/javascript" src="app.js"></script>
+    <!--<script type="text/javascript" src="app.js"></script> -->
 </head>
-<body ng-app="materializeApp" ng-controller="BodyController">
-<main>
-    <div class="container">
-        <div class="row">
-            <div class="section col s4">
-                <div input-field>
-                    <select ng-model="select.value" material-select>
-                        <option ng-repeat="value in select.choices">{{value}}</option>
-                    </select>
-                </div>
-            </div>
-            <div class="section col s8">
-                <h5>You selected: <b>{{select.value}}</b></h5>
-            </div>
-        </div>
+<body  style="color:#ffffff">
+<div class="container" style="width: 100%;">
+    <div class="row sombra" style="background:#f44336; margin-bottom: 0px;">
+        <div class="col s1"><i class="medium material-icons">menu</i></div>
+        <div class="col s11"></div>
     </div>
-</main>
+    <div class="row" style="background:#f44336; ">
+        <div class="col s12">MonitON</div>
+    </div>
+</div>
 </body>
 </html>
