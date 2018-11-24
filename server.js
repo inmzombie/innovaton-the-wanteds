@@ -23,7 +23,7 @@ app.use(function (req, res, next) {
 app.use('/scripts', express.static(__dirname + '/node_modules'));
 
 io.on('connection', function (socket) {
-    console.log('a user connected');
+    console.log('---> Socket conectado');
 });
 
 /**
