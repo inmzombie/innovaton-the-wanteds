@@ -19,6 +19,8 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.7.5",
-    "express": "^4.16.4"
+    "angular-materialize": "^0.2.2",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1"
   }
 }
