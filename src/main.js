@@ -26,4 +26,7 @@ function updateMov(data) {
  * EXPOSE STUFF TO THE GLOBAL WINDOW
  */
 
+window.updateHeartRadio = updateHeartRadio
+window.updateCalories = updateCalories
+window.updateMov = updateMov
 window.connectBluetooth = connectBluetooth
