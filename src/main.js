@@ -63,3 +63,8 @@ async function scan() {
 }
 
 document.querySelector('#bt_connect').addEventListener('click', scan)
+
+// Document $scope
+// |setTimeout(() => {
+// 	alert("Hello World")
+// }, 5000)

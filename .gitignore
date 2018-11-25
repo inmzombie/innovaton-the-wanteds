@@ -69,3 +69,7 @@ front-end-user/node_modules
 
 # COMMON STUFF
 /node_modules
+
+# TO AVOID PULULATE GIT UNNECESARYLY
+/static/app.bundle.js
+/static/app.bundle.js.map
