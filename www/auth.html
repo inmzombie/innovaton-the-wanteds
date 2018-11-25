@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MonitON</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="613542828261-nq0etinpe50lb47c5vdj45epfa106q5o.apps.googleusercontent.com">
+</head>
+<style>
+    .content-form-sign-in {
+        width: 50%;
+        background-color: #f44336;
+        color: #ffffff;
+        padding-top:    50px;
+        padding-right: 80px;
+        padding-bottom: 50px;
+        padding-left: 80px;
+        font-family: lato;
+        font-style: bold;
+        margin: auto;
+    }
+    body{
+        height: 100%;
+        width: auto;
+    }
+    .btn-default {
+        margin: 20px 0px 10px 0px;
+
+    }
+    h2 {
+        font-style: bold;
+    }
+
+</style>
+<body style="background-color: #f44336">
+
+<div class="content-form-sign-in">
+    <h1>MonitON</h1>
+    <h2>Bienvenido</h2>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <label>Usuario </label>
+    <input type="text" class="form-control" name="">
+    <label>Contraseña </label>
+    <input type="text" class="form-control" name="">
+    <button class= "btn btn-default">Ingresar</button>
+</div>
+<script type="text/javascript">
+    function onSignIn(googleUser) {
+        if (gapi.auth2.getAuthInstance().isSignedIn.Ab) {
+            console.log(gapi.auth2.getAuthInstance().isSignedIn);
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            //window.location.replace("/index.html");
+        }
+    }
+</script>
+
+</body>
+</html>
