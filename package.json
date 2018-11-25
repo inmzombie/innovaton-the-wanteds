@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node start.js",
-    "dev": "nodemon start.js"
+    "dev": "nodemon start.js",
+    "build:watch": "rollup -c ./.rollup.js -w",
+    "build": "rollup -c ./.rollup.js"
   },
   "repository": {
     "type": "git",
@@ -19,16 +21,34 @@
   ],
   "author": "the wanteds",
   "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "rollup": "^0.63.5",
+    "rollup-plugin-commonjs": "^9.1.4",
+    "rollup-plugin-eslint": "^5.0.0",
+    "rollup-plugin-filesize": "^4.0.1",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-less": "^0.1.4",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.2.1",
+    "rollup-plugin-node-resolve": "^3.0.3",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-uglify": "^4.0.0"
+  },
   "dependencies": {
     "angular": "^1.7.5",
     "angular-materialize": "^0.2.2",
+    "babel-core": "^7.0.0-bridge.0",
     "express": "^4.16.4",
     "express-cors": "0.0.3",
     "jquery": "^3.3.1",
     "socket.io": "^2.1.1"
   },
-  "devDependencies": {
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0"
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
   }
 }
