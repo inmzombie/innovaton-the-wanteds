@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MonitON</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="613542828261-nq0etinpe50lb47c5vdj45epfa106q5o.apps.googleusercontent.com">
+</head>
+<style>
+    .content-form-sign-in {
+
+        background-color: #f44336;
+        color: #ffffff;
+        
+        font-family: 'Lato', sans-serif; 
+        font-width: bold;
+
+    }
+    body{
+        height: 100%;
+        width: auto;
+    }
+    .btn-default {
+        margin: 20px 0px 10px 0px;
+
+    }
+    h2 {
+        font-style: bold;
+    }
+
+</style>
+<body style="background-color: #f44336">
+
+
+<div class="container content-form-sign-in text-center">
+    <h1>MonitON</h1>
+    <h2>Bienvenido</h2>
+    <br/><div class="g-signin2" data-onsuccess="onSignIn"></div></br/>
+    <label>Usuario </label>
+    <input type="text" class="form-control" name="">
+    <label>Contraseña </label>
+    <input type="text" class="form-control" name="">
+    <button class= "btn btn-default">Ingresar</button>
+</div>
+<script type="text/javascript">
+    function onSignIn(googleUser) {
+        if (gapi.auth2.getAuthInstance().isSignedIn.Ab) {
+            console.log(gapi.auth2.getAuthInstance().isSignedIn);
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            //window.location.replace("/index.html");
+        }
+    }
+</script>
+
+</body>
+</html>
