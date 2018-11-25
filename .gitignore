@@ -66,3 +66,6 @@ front-end-user/node_modules
 
 #ignore idea
 ./.idea
+
+# COMMON STUFF
+/node_modules

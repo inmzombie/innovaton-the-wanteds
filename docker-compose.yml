@@ -1,0 +1,29 @@
+version: '3'
+services:
+  # MONGODB DATABASE
+  mongo-database:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: moniton
+    volumes:
+      - mongodb-vol-innovaton:/data/db  
+  # NGINX ENTRY
+  nginx:
+    build:
+      context: ./docker/nginx/
+    restart: always
+    volumes:
+      - ./www:/usr/share/nginx/moniton
+    depends_on:
+      - mongo-database
+    ports:
+     - 80:80
+     - 443:443
+volumes:
+  mongodb-vol-innovaton:
+
+
+
