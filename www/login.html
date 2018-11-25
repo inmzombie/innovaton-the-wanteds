@@ -1,0 +1,88 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MonitON</title>
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#f44336">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#f44336">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#f44336">
+	<!-- Materialize CSS -->
+	<link rel="stylesheet" href="/scripts/node-materialize/bin/materialize.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+	<script type="text/javascript" src="/scripts/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="/scripts/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/scripts/node-materialize/bin/materialize.js"></script>
+	<script type="text/javascript" src="/scripts/angular-materialize/src/angular-materialize.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript">
+
+		
+
+	</script>
+	<style>
+		.sombra {
+			-webkit-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+			-moz-box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+			box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2);
+		}
+
+		.inactivo {
+			background: #d32f2f;
+		}
+
+		.inactivo-texto {
+			opacity: 0.5
+		}
+		body{
+		-webkit-user-select: none; /* Safari */        
+		-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* IE10+/Edge */
+		user-select: none; /* Standard */
+		}
+		.modalesp{
+			display: none;
+		}
+	</style>
+</head>
+
+<body style="color:#ffffff; background:#f44336;">
+	<div class="container" style="width: 100%; padding:0">
+						<!---->
+			<div class="row" style="margin:0">
+				<div class="col s2" style="margin-top: 20px;"><a href="/profile.html" style="color: #fff; text-decoration:none"><i class="material-icons">arrow_back</i></a></div>
+				<div class="col s8" style="font-size: 25px; text-align:left;font-family: 'Lato', sans-serif; font-weight: bold; margin-top:65px; padding-left:20px">Iniciar Sesión</div>
+				
+			</div>
+			<form>
+			<div class="row" style="background:#ffffff; color: #000000; min-height:90vh; margin:0">
+				
+				<div class="input-field col s12">
+					<input placeholder="Usuario" id="usr" type="text" class="validate">
+					<label for="usr">Usuario</label>
+				</div>
+				<div class="input-field col s12">
+					<input placeholder="Contraseña" id="pss" type="password" class="validate">
+					<label for="pss">Contraseña</label>
+				</div>
+				
+				<div class="col s12">
+					<a class="waves-effect waves-light btn" style="background:#f44336">Ingresar</a>
+				</div>
+				
+			</div>
+			</form>
+		<!---->
+		<div class="row" style="margin:0; position: fixed; bottom:0; height:55px; z-index:999; left:0; background:#f44336; width:100%;">
+			
+
+		</div>
+	</div>
+</body>
+
+</html>
