@@ -4,15 +4,21 @@ import jQuery from 'jquery'
 
 import { connectBluetooth } from './index.html.js'
 
+import axios from 'axios'
+
 function updateHeartRadio(data) {
+	
+	/*insertar envío de datos aquí!!!*/
 	jQuery('.heart-ration').html(data);
 }
 
 function updateCalories(data) {
+	/*insertar envío de datos aquí!!!*/
 	jQuery('.cal').html(data)
 }
 
 function updateMov(data) {
+	/*insertar envío de datos aquí!!!*/
 	jQuery('.mov').html(data)
 }
 

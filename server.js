@@ -47,7 +47,7 @@ app.use('/static', express.static(__dirname + '/static'))
  */
 
 io().on('connection', function (socket) {
-	console.log('---> Socket conectado');
+	console.log('---> Cliente conectado');
 });
 
 /**
@@ -58,11 +58,28 @@ app.get('/', (req, res) => {
 })
 
 /**
- * @description :: actualiza el valor de HR en front.
+ * @description :: SEND HR VALUE
  */
-app.get('/setvalue/:value', function (req, res) {
+app.get('/update_hr/:value', function (req, res) {
 	console.log(req.params.value);
-	io.emit('update', req.params.value);
+	io.emit('update:hr', req.params.value);
+	return res.status(200).json(req.params.value)
+});
+/**
+ * @description :: SEND CAL VALUE
+ */
+app.get('/update_cal/:value', function (req, res) {
+	console.log(req.params.value);
+	io.emit('update:cal', req.params.value);
+	return res.status(200).json(req.params.value)
+});
+
+/**
+ * @description :: SEND MOV VALUE
+ */
+app.get('/update_mov/:value', function (req, res) {
+	console.log(req.params.value);
+	io.emit('update:mov', req.params.value);
 	return res.status(200).json(req.params.value)
 });
 
