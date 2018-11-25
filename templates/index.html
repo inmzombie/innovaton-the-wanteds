@@ -25,15 +25,17 @@
 			secure: true
 		});
 
-		socket.on('update:hr', function (msg) {
-			console.log(msg);
-			updateHeartRadio(msg);
-		});
-        socket.on('update:cal', function (msg) {
-            updateCalories(msg);
-        });
-        socket.on('update:mov', function (msg) {
-            updateMov(msg);
+        socket.on('connect', function() {
+            socket.on('update:hr', function (msg) {
+                console.log(msg);
+                updateHeartRadio(msg);
+            });
+            socket.on('update:cal', function (msg) {
+                updateCalories(msg);
+            });
+            socket.on('update:mov', function (msg) {
+                updateMov(msg);
+            });
         });
 		function getUserMedia(options, successCallback, failureCallback) {
 			var api = navigator.getUserMedia || navigator.webkitGetUserMedia ||
@@ -199,7 +201,7 @@
 
 		document.addEventListener('DOMContentLoaded', function () {
 			var elems = document.querySelectorAll('.modal');
-			var instances = M.Modal.init(elems, options);
+			var instances = M.Modal.init(elems);
 		});
 
 		// Or with jQuery
