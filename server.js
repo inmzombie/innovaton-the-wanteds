@@ -38,13 +38,9 @@ let socketServer = io(server, {
 /**
  * STATIC FILES - FRONT END
  */
-app.use(express.static(__dirname + '/www'));
-
-
-/**
- * ROUTES SCRIPTS CALLS TO node_modules
- */
+app.use(express.static(__dirname + '/templates'));
 app.use('/scripts', express.static(__dirname + '/node_modules'));
+app.use('/static', express.static(__dirname + '/static'))
 
 /**
  * SOCKETS CONFIGURATION
