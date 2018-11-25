@@ -73,3 +73,6 @@ front-end-user/node_modules
 # TO AVOID PULULATE GIT UNNECESARYLY
 /static/app.bundle.js
 /static/app.bundle.js.map
+
+#ignore visual code
+./.vscode

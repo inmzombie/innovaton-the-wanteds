@@ -25,11 +25,16 @@
 			secure: true
 		});
 
-		socket.on('update', function (msg) {
+		socket.on('update:hr', function (msg) {
 			console.log(msg);
 			updateHeartRadio(msg);
 		});
-
+        socket.on('update:cal', function (msg) {
+            updateCalories(msg);
+        });
+        socket.on('update:mov', function (msg) {
+            updateMov(msg);
+        });
 		function getUserMedia(options, successCallback, failureCallback) {
 			var api = navigator.getUserMedia || navigator.webkitGetUserMedia ||
 				navigator.mozGetUserMedia || navigator.msGetUserMedia;
