@@ -11,10 +11,10 @@
     <!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
     <script type="text/javascript" src="/scripts/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="/scripts/angular/angular.min.js"></script>
+	<script type="text/javascript" src="https://materializecss.com/bin/materialize.js"></script>
     <script type="text/javascript" src="/scripts/node-materialize/bin/materialize.js"></script>
     <script type="text/javascript" src="/scripts/angular-materialize/src/angular-materialize.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
-    <script type="text/javascript" src="/static/app.js"></script>
     <script type="text/javascript">
         var socket = io('https://localhost:3000');
         socket.on('update', function(msg){
@@ -36,6 +36,18 @@
         .inactivo-texto {
             opacity: 0.5
         }
+		.modalesp{
+			display: none;
+		}
+		[type="radio"]:not(:checked), [type="radio"]:checked {
+			position: static;
+			left: 0; 
+			visibility: visible;
+		}
+		.labelradius{
+		    font-size: 1.0rem;
+			color: #9e9e9e;
+		}
     </style>
 </head>
 <body  style="color:#ffffff; background:#f44336;">
@@ -46,6 +58,40 @@
             
         </div>
     </div>
+	<!--modal-->
+		<div id="modal1" class="modal" tabindex="0" style="z-index: 1003; display: none; opacity: 0; top: 4%; transform: scaleX(0.8) scaleY(0.8); color:#000000">
+			<div class="modal-content">
+				<table style="color:#000000">
+					<thead>
+					  <tr>
+						  <th>Ejercicio</th>
+						  <th>Tiempo</th>
+					  </tr>
+					</thead>
+
+					<tbody>
+					<form>
+					  <tr>
+						<td> <label class="labelradius"><input name="group1" type="radio" checked /> Ejercicio 1</label></td>
+						<td>20:00.-</td>
+					  </tr>
+					  <tr>
+						<td> <label class="labelradius"><input name="group1" type="radio" /> Ejercicio 2</label></td>
+						<td>30:00.-</td>
+					  </tr>
+					  <tr>
+						<td> <label class="labelradius"><input name="group1" type="radio" /> Ejercicio 2</label></td>
+						<td>31:00.-</td>
+					  </tr>
+					  </form>
+					</tbody>
+				  </table>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-close waves-effect waves-red btn-flat">Cancelar</a>
+				<a href="/exercise.html" class="modal-close waves-effect waves-green btn-flat">Continuar</a>
+			</div>
+		</div>
 	<div class="row" style="margin:0; position: fixed; bottom:0; height:55px; z-index:999; left:0; background:#f44336; width:100%;">
 				<div class="col s12" style="margin-top: 5px;"></div>
 				<div class="col s2 waves-effect waves-light" style="text-align:center"><i class="material-icons" style="font-size: 40px; "><a href="/index.html" class="inactivo-texto"  style="font-size: 30px; text-align:center; color: #ffffff;">home</a></i><br /><span
@@ -65,5 +111,12 @@
 
 			</div>
 </div>
+<script type="text/javascript">
+       
+
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
+	</script>
 </body>
 </html>

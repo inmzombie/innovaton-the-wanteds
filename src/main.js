@@ -4,6 +4,7 @@ import MiBand from './miband'
 
 import jQuery from 'jquery'
 
+
 const bluetooth = navigator.bluetooth;
 
 const output = document.querySelector('#output');
