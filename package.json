@@ -7,7 +7,8 @@
     "start": "node start.js",
     "server": "nodemon start.js",
     "build:watch": "rollup -c ./.rollup.js -w",
-    "build": "rollup -c ./.rollup.js"
+    "build": "rollup -c ./.rollup.js",
+    "ssh": "ssh -i ~/.ssh/codeinearts.pem ubuntu@13.211.152.35"
   },
   "repository": {
     "type": "git",

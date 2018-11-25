@@ -6,7 +6,7 @@ import { connectBluetooth } from './index.html.js'
 
 import axios from 'axios'
 
-const base_url = 'https://localhost:3000'
+const base_url = 'http://localhost:3000'
 
 function updateHeartRadio(data) {
 
@@ -49,7 +49,6 @@ function updateMov(data) {
 /**
  * EXPOSE STUFF TO THE GLOBAL WINDOW
  */
-
 window.updateHeartRadio = updateHeartRadio
 window.updateCalories = updateCalories
 window.updateMov = updateMov
