@@ -1,4 +1,50 @@
 import MiBand from './miband'
+import axios from 'axios'
+import jQuery from 'jquery'
+
+function updateHeartRadio(data) {
+
+	// axios({
+	// 	method: 'GET',
+	// 	url: `${base_url}/update_hr/${data}`
+	// }).then((res) => {
+	// 	console.log("Datos recibidos por el servidor")
+	// 	console.log(res.data)
+  // })
+  
+  /**
+   * SHIT MAN!
+   */
+
+  jQuery('.display_hr').html(data);
+  
+  console.info(data)
+}
+
+function updateCalories(data) {
+	// axios({
+	// 	method: 'GET',
+	// 	url: `${base_url}/update_cal/${data}`
+	// }).then((res) => {
+	// 	console.log("Datos recibidos por el servidor")
+	// 	console.log(res.data)
+	// })
+
+	jQuery('.display_cal').html(data)
+}
+
+function updateMov(data) {
+
+	// axios({
+	// 	method: 'GET',
+	// 	url: `${base_url}/update_mov/${data}`
+	// }).then((res) => {
+	// 	console.log("Datos recibidos por el servidor")
+	// 	console.log(res.data)
+	// })
+
+	jQuery('.display_mov').html(data)
+}
 
 const bluetooth = navigator.bluetooth;
 
@@ -40,6 +86,8 @@ async function test_all(miband, log) {
   } catch (e) {
     log('OK, nevermind ;)')
   }
+  updateMov(ped.steps)
+  updateCalories(ped.calories)
 
   log('Heart Rate Monitor (single-shot)')
   log('Result:', await miband.hrmRead())
@@ -47,9 +95,10 @@ async function test_all(miband, log) {
   log('Heart Rate Monitor (continuous for 30 sec)...')
   miband.on('heart_rate', (rate) => {
     log('Heart Rate:', rate)
+    updateHeartRadio(rate)
   })
   await miband.hrmStart();
-  await delay(30000);
+  await delay(60000);
   await miband.hrmStop();
 
   //log('RAW data (no decoding)...')

@@ -3,6 +3,7 @@
  */
 
 import https from 'https'
+import http from 'http'
 import express from 'express'
 import io from 'socket.io'
 import fs from 'fs'
@@ -25,7 +26,8 @@ const httpsOptions = {
 }
 
 // Server instance
-let server = https.createServer(httpsOptions, app);
+// let server = https.createServer(httpsOptions, app);
+let server = http.createServer(app);
 
 /**
  * SOCKETS.IO INTEGRATION
