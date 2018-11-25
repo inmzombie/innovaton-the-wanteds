@@ -62,7 +62,7 @@ app.get('/', (req, res) => {
  */
 app.get('/update_hr/:value', function (req, res) {
 	console.log(req.params.value);
-	io.emit('update:hr', req.params.value);
+	io().emit('update:hr', req.params.value);
 	return res.status(200).json(req.params.value)
 });
 /**
@@ -70,7 +70,7 @@ app.get('/update_hr/:value', function (req, res) {
  */
 app.get('/update_cal/:value', function (req, res) {
 	console.log(req.params.value);
-	io.emit('update:cal', req.params.value);
+	io().emit('update:cal', req.params.value);
 	return res.status(200).json(req.params.value)
 });
 
@@ -79,7 +79,7 @@ app.get('/update_cal/:value', function (req, res) {
  */
 app.get('/update_mov/:value', function (req, res) {
 	console.log(req.params.value);
-	io.emit('update:mov', req.params.value);
+	io().emit('update:mov', req.params.value);
 	return res.status(200).json(req.params.value)
 });
 

@@ -6,20 +6,44 @@ import { connectBluetooth } from './index.html.js'
 
 import axios from 'axios'
 
+const base_url = 'https://localhost:3000'
+
 function updateHeartRadio(data) {
-	
-	/*insertar envío de datos aquí!!!*/
-	jQuery('.heart-ration').html(data);
+
+	axios({
+		method: 'GET',
+		url: `${base_url}/update_hr/${data}`
+	}).then((res) => {
+		console.log("Datos recibidos por el servidor")
+		console.log(res.data)
+	})
+
+	jQuery('.display_hr').html(data);
 }
 
 function updateCalories(data) {
-	/*insertar envío de datos aquí!!!*/
-	jQuery('.cal').html(data)
+	axios({
+		method: 'GET',
+		url: `${base_url}/update_cal/${data}`
+	}).then((res) => {
+		console.log("Datos recibidos por el servidor")
+		console.log(res.data)
+	})
+
+	jQuery('.display_cal').html(data)
 }
 
 function updateMov(data) {
-	/*insertar envío de datos aquí!!!*/
-	jQuery('.mov').html(data)
+
+	axios({
+		method: 'GET',
+		url: `${base_url}/update_mov/${data}`
+	}).then((res) => {
+		console.log("Datos recibidos por el servidor")
+		console.log(res.data)
+	})
+
+	jQuery('.display_mov').html(data)
 }
 
 /**

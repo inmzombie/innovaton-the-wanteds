@@ -29,12 +29,13 @@
 			console.log(msg);
 			updateHeartRadio(msg);
 		});
-        socket.on('update:cal', function (msg) {
-            updateCalories(msg);
-        });
-        socket.on('update:mov', function (msg) {
-            updateMov(msg);
-        });
+		socket.on('update:cal', function (msg) {
+			updateCalories(msg);
+		});
+		socket.on('update:mov', function (msg) {
+			updateMov(msg);
+		});
+
 		function getUserMedia(options, successCallback, failureCallback) {
 			var api = navigator.getUserMedia || navigator.webkitGetUserMedia ||
 				navigator.mozGetUserMedia || navigator.msGetUserMedia;
