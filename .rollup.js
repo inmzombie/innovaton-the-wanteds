@@ -2,7 +2,7 @@ import builtins from 'rollup-plugin-node-builtins'
 import globals from 'rollup-plugin-node-globals'
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
-import { eslint } from 'rollup-plugin-eslint'
+// import { eslint } from 'rollup-plugin-eslint'
 import uglify from 'rollup-plugin-uglify'
 import filesize from 'rollup-plugin-filesize'
 import json from 'rollup-plugin-json'
@@ -41,10 +41,10 @@ export default {
   },
   sourceMap: true,
   plugins: [
-    eslint({
-      throwOnError: true,
-      exclude: [ './node_modules/**', './src/styles/**' ]
-    }),
+    // eslint({
+    //   throwOnError: true,
+    //   exclude: [ './node_modules/**', './src/styles/**' ]
+    // }),
     resolve({
       jsnext: true,
       main: true,

@@ -15,56 +15,56 @@ module.exports = {
 		"ecmaVersion": 2017
 	},
 	"rules": {
-		"no-var": "error",
-		"no-unreachable": "warn",
-		"complexity": ["warn", 4],
-		"max-depth": ["warn", 4],
-		"max-params": ["warn", 4],
-		"max-statements": ["warn", 30],
+		// "no-var": "error",
+		// "no-unreachable": "warn",
+		// "complexity": ["warn", 4],
+		// "max-depth": ["warn", 4],
+		// "max-params": ["warn", 4],
+		// "max-statements": ["warn", 30],
 
-		"no-console": "off",
-		"no-debugger": "warn",
+		// "no-console": "off",
+		// "no-debugger": "warn",
 
-		"prefer-template": "warn",
-		"consistent-return": "error",
-		//"class-methods-use-this": "error",
-		"no-warning-comments": "warn",
-		"no-unused-vars": [
-			"warn", // error
-			{
-				"argsIgnorePattern": "^_"
-			}
-		],
-
-		"default-case": [
-			"error",
-			{
-				"commentPattern": "^skip\\sdefault"
-			}
-		],
-		// "indent": [
-		// 	"warn",
-		// 	"tab"
+		// "prefer-template": "warn",
+		// "consistent-return": "error",
+		// //"class-methods-use-this": "error",
+		// "no-warning-comments": "warn",
+		// "no-unused-vars": [
+		// 	"warn", // error
+		// 	{
+		// 		"argsIgnorePattern": "^_"
+		// 	}
 		// ],
-		"no-trailing-spaces": [
-			"warn"
-		],
-		"eol-last": [
-		//	"error",
-			"warn",
-			"always"
-		],
 
-		"quotes": [
-			"warn",
-			"single",
-			{
-				"allowTemplateLiterals": true
-			}
-		],
-		"semi": [
-			"off", //"warn",
-			"never"
-		],
+		// "default-case": [
+		// 	"error",
+		// 	{
+		// 		"commentPattern": "^skip\\sdefault"
+		// 	}
+		// ],
+		// // "indent": [
+		// // 	"warn",
+		// // 	"tab"
+		// // ],
+		// "no-trailing-spaces": [
+		// 	"warn"
+		// ],
+		// "eol-last": [
+		// //	"error",
+		// 	"warn",
+		// 	"always"
+		// ],
+
+		// "quotes": [
+		// 	"warn",
+		// 	"single",
+		// 	{
+		// 		"allowTemplateLiterals": true
+		// 	}
+		// ],
+		// "semi": [
+		// 	"off", //"warn",
+		// 	"never"
+		// ],
 	}
 };

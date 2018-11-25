@@ -12,4 +12,6 @@
 
 # FAQ
 
-- Agregar según corresponda
+- ¿CURL para cambio de datos manual?
+
+`curl -k https://localhost:3000`

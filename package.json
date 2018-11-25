@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node start.js",
     "server": "nodemon start.js",
-    "build:watch": "./node_modules/rollup/bin/rollup -c ./.rollup.js -w",
-    "build": "./node_modules/rollup/bin/rollup -c ./.rollup.js"
+    "build:watch": "rollup -c ./.rollup.js -w",
+    "build": "rollup -c ./.rollup.js"
   },
   "repository": {
     "type": "git",
