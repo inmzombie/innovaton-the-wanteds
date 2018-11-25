@@ -36,6 +36,8 @@
 	</style>
 </head>
 <body  style="color:#ffffff; background:#c62828;">
+<div class="g-signin2" style="display: none" data-onsuccess="onSignIn"></div></br/>
+
 		<div class="container" style="width: 100%; padding:0">
 			
 			<div class="row" style="margin: 40px 0px 0px 0px" >
@@ -98,11 +100,8 @@
                 function signOut() {
                     var auth2 = gapi.auth2.getAuthInstance();
                     auth2.signOut().then(function () {
-                        console.log('User signed out.');
-                        console.log(gapi.auth2.getAuthInstance().isSignedIn, " in auth then");
+                        window.location.replace("/auth.html");
                     });
-                    console.log(gapi.auth2.getAuthInstance().isSignedIn, " out then");
-                    //window.location.replace("/auth.html");
                 }
 			</script>
 		</div>
